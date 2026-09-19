@@ -1,0 +1,6 @@
+# Paper sources and build artifacts (kept local while the paper is under review)
+stars_latex/
+STARS_arxiv.pdf
+
+# Upstream template the project page was derived from
+sns_site/

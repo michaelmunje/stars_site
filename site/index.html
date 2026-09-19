@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <meta name="description" content="STARS learns event-level relational representations of human-robot interaction by autoencoding spatiotemporal interaction graphs.">
+  <meta property="og:title" content="STARS"/>
+  <meta property="og:description" content="STARS learns event-level relational representations of human-robot interaction by autoencoding spatiotemporal interaction graphs."/>
+  <!-- TODO: replace with the final project page URL -->
+  <meta property="og:url" content="https://larg.github.io/stars"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/method.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <meta name="twitter:title" content="STARS">
+  <meta name="twitter:description" content="STARS learns event-level relational representations of human-robot interaction by autoencoding spatiotemporal interaction graphs.">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/method.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Social Robotics,Human-Robot Interaction,Representation Learning,Graph Neural Networks,Social Navigation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>STARS</title>
+
+  <!-- TODO: replace static/images/favicon.ico with your own icon (the current one is inherited from the SocialNav-SUB page) -->
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/stars.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+  <!-- Header / Title / Authors -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">STARS: From Spatiotemporal Dynamics to Social Representations in Human-Robot Interaction</h1>
+            <!-- TODO: update once the venue is decided (currently a preprint / submission) -->
+            <p class="subtitle is-4 has-text-grey-dark" style="margin-top:-0.5rem;">
+              Preprint, 2026
+            </p>
+
+            <!-- Paper authors -->
+            <div class="is-size-5 publication-authors">
+              <!-- TODO: add personal page links for the authors without one below -->
+              <span class="author-block">Nathan Tsoi<sup>1</sup><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://michaelmunje.com" target="_blank" rel="noopener noreferrer">Michael J. Munje</a><sup>1</sup><sup>*</sup><sup>✉</sup>,</span>
+              <span class="author-block">Tejas Oberoi<sup>1</sup>,</span>
+              <span class="author-block">Rishab Maheshwari<sup>1</sup>,</span>
+              <span class="author-block">Pengen Zheng<sup>1</sup>,</span>
+              <span class="author-block">Tanush Chauhan<sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://www.cs.utexas.edu/~pstone" target="_blank" rel="noopener noreferrer">Peter Stone</a><sup>1,2</sup>,</span>
+              <span class="author-block">
+                <a href="https://www.joydeepb.com" target="_blank" rel="noopener noreferrer">Joydeep Biswas</a><sup>1</sup>
+              </span>
+            </div>
+
+            <!-- Affiliations + correspondence -->
+            <div class="is-size-6">
+              <div><sup>1</sup> Department of Computer Science, The University of Texas at Austin</div>
+              <div><sup>2</sup> Sony AI</div>
+              <div class="eql-cntrb"><sup>*</sup> Equal contribution</div>
+              <div><sup>✉</sup> Correspondence: <a href="mailto:michaelmunje@utexas.edu">michaelmunje@utexas.edu</a></div>
+            </div>
+
+            <!-- Links -->
+            <div class="publication-links" style="margin-top: 1rem;">
+
+              <!-- Paper PDF -->
+              <span class="link-block">
+                <a href="static/pdfs/STARS.pdf" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <!-- TODO: uncomment and fill in once the arXiv posting is live
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              -->
+
+              <!-- TODO: uncomment and fill in once the code release is public
+              <span class="link-block">
+                <a href="https://github.com/ORG/STARS" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+              -->
+            </div>
+
+          </div> <!-- /column -->
+        </div> <!-- /columns -->
+      </div> <!-- /container -->
+    </div> <!-- /hero-body -->
+  </section>
+  <!-- End header -->
+
+  <!-- Overview figure -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Overview</h2>
+        <figure class="image">
+          <img src="static/images/method.png" alt="Overview of the three STARS stages: graph construction, unsupervised pretraining, and linear probing">
+          <figcaption class="has-text-centered is-size-6" style="margin-top: 0.5rem;">
+            <em>
+              The three stages of <strong>STARS</strong>:
+              (<strong>A</strong>) construct spatiotemporal graphs from multi-modal Human-Robot Interaction datasets,
+              (<strong>B</strong>) use an unsupervised message-passing graph autoencoder to compress physical dynamics into latent representations, and
+              (<strong>C</strong>) adapt the frozen latents to downstream tasks with lightweight task-specific prediction heads.
+            </em>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Fielding socially competent robots requires joint reasoning over spatial information and the social information it can convey, such as group motion and personal space. While current models excel at either spatial reasoning (e.g., modeling physical dynamics) or social reasoning (e.g., parsing text-based interactions), few natively unify both. Moreover, data scarcity in Human-Robot Interaction (HRI) makes training large models from scratch challenging. To bridge this gap, we introduce <strong>STARS</strong>: <strong>S</strong>patio<strong>T</strong>emporal <strong>A</strong>utoencoded <strong>R</strong>epresentations for <strong>S</strong>ocial-interaction, a method for learning <em>event-level relational representations</em> that summarize short interaction scenarios from social navigation datasets. Rather than training task-specific models, STARS models fixed-duration interaction scenarios, i.e., short windows of multi-agent interaction, as spatiotemporal graphs. A self-supervised message-passing graph neural network autoencoder then compresses these physical dynamics into a compact latent space for each node. By explicitly modeling agents and their interactions as graph structure, STARS injects a strong relational inductive bias to naturally capture the underlying social situation. To assess the utility of these learned representations, we evaluate STARS' representations on the SEAN Together dataset, which provides VR-based navigation data annotated with subjective human perceptions, and the SocialNav-SUB benchmark for social scene understanding. When trained on STARS representations, linear probes achieve highly competitive performance on perception prediction and pedestrian action classification tasks. Specifically, STARS exhibits strong data efficiency, with its largest gains over unstructured baselines on pedestrian action classification, where STARS-He achieves a macro <em>F</em><sub>1</sub>-Score of 0.362 with 1% of labeled data and 0.503 with 100%. Furthermore, qualitative analysis of the learned latent space reveals that STARS representations can capture high-level social semantics, demonstrating cohesive clustering of distinct human action intents without optimizing the encoder with a supervised action classification objective.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- What's in STARS -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">What's in STARS</h2>
+        <div class="columns is-multiline" style="margin-top: 0.5rem;">
+          <div class="column is-one-third">
+            <div class="stars-card">
+              <p class="stars-card-kicker">A</p>
+              <h3 class="stars-card-title">Interaction scenarios as graphs</h3>
+              <p class="stars-card-body">
+                Each fixed-duration window of multi-agent motion becomes a <strong>complete, edge-feature-dense graph</strong>:
+                agents are nodes and every ordered pair carries a temporal sequence of relative <em>SE</em>(2) poses and their deltas
+                (8 channels). Datasets with different sensors, rates, and annotations map into one schema.
+              </p>
+            </div>
+          </div>
+          <div class="column is-one-third">
+            <div class="stars-card">
+              <p class="stars-card-kicker">B</p>
+              <h3 class="stars-card-title">Self-supervised graph autoencoder</h3>
+              <p class="stars-card-body">
+                A message-passing GNN-VAE encodes each node to a <strong>128-D Gaussian latent</strong> and reconstructs the temporal
+                edge features from latent pairs. No labels are used during pretraining, so the encoder can be larger than a
+                supervised model of the same architecture without overfitting the scarce annotations.
+              </p>
+            </div>
+          </div>
+          <div class="column is-one-third">
+            <div class="stars-card">
+              <p class="stars-card-kicker">C</p>
+              <h3 class="stars-card-title">Frozen latents, linear probes</h3>
+              <p class="stars-card-body">
+                The encoder is frozen and a <strong>linear probe</strong> reads out task-relevant latents &mdash; robot-plus-mean-human for
+                graph-level SEAN-T perception, robot-plus-target-human for node-level SNS action classification. Downstream scores
+                therefore reflect the representation, not task-specific representation learning.
+              </p>
+            </div>
+          </div>
+        </div>
+        <p class="has-text-centered is-size-6 has-text-grey" style="margin-top: 0.25rem;">
+          We instantiate STARS in two variants: <strong>STARS-Ho</strong> (homogeneous graph, one node and edge type)
+          and <strong>STARS-He</strong> (heterogeneous graph, typed robot/bystander nodes and typed relations).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Datasets and latent space -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Datasets &amp; Learned Latent Space</h2>
+        <figure class="image">
+          <img src="static/images/datasets_latent.png" alt="Left: example frames from the SEAN-T and SocialNav-SUB datasets. Right: PCA and t-SNE projections of STARS human-node latents colored by avoid and follow actions.">
+          <figcaption class="has-text-centered is-size-6" style="margin-top: 0.5rem;">
+            <em>
+              <strong>(A) Dataset overview.</strong> We use two human-robot interaction datasets:
+              <strong>SEAN-T</strong> for subjective human ratings of robot navigation, and
+              <strong>SNS</strong> (SocialNav-SUB) for relational pedestrian action classification (e.g., <em>avoid</em>, <em>follow</em>).
+              <strong>(B) Latent space analysis.</strong> 2D projections of the 128-dimensional SNS human-node embeddings from the
+              STARS-trained homogeneous GNN-VAE encoder, using linear <strong>PCA</strong> and non-linear <strong>t-SNE</strong>,
+              color-coded by action label. The encoder was never optimized with a supervised action classification objective,
+              yet the latent space self-organizes by action intent.
+            </em>
+          </figcaption>
+        </figure>
+
+        <div class="content" style="margin-top: 1.5rem;">
+          <h3 class="title is-5 has-text-centered">Dataset and graph construction</h3>
+          <div class="table-container">
+            <table class="table is-striped is-hoverable is-fullwidth stars-table">
+              <thead>
+                <tr>
+                  <th>Dataset</th>
+                  <th class="has-text-centered"># Scenarios</th>
+                  <th class="has-text-centered">Sample freq.</th>
+                  <th class="has-text-centered">Window size <em>T</em></th>
+                  <th class="has-text-centered">Window duration</th>
+                  <th class="has-text-centered">Max nodes <em>N</em></th>
+                  <th class="has-text-centered">Max edges</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>SEAN-T</td>
+                  <td class="has-text-centered">2969</td>
+                  <td class="has-text-centered">5 Hz</td>
+                  <td class="has-text-centered">40</td>
+                  <td class="has-text-centered">8 s</td>
+                  <td class="has-text-centered">16</td>
+                  <td class="has-text-centered">240</td>
+                </tr>
+                <tr>
+                  <td>SocialNav-SUB</td>
+                  <td class="has-text-centered">3052</td>
+                  <td class="has-text-centered">8 Hz</td>
+                  <td class="has-text-centered">20</td>
+                  <td class="has-text-centered">2.5 s</td>
+                  <td class="has-text-centered">31</td>
+                  <td class="has-text-centered">930</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="has-text-centered is-size-6 has-text-grey">
+            The temporal window is fixed within each dataset; the maximum number of edges follows from the maximum number of
+            nodes under the fully connected graph construction.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Downstream Performance and Data Efficiency</h2>
+
+      <p class="has-text-justified content">
+        We pretrain STARS on the combined training splits with the self-supervised reconstruction objective, freeze the encoder,
+        and train a linear probe on progressively larger fractions of the labels. The clearest gap appears on
+        <strong>SNS pedestrian action classification</strong>: unstructured baselines plateau near a macro
+        <em>F</em><sub>1</sub>-Score of 0.3 no matter how much labeled data they receive, while
+        <strong>STARS-He reaches 0.362 with just 1% of the labels (60 samples)</strong> and climbs to 0.503 at 100%.
+      </p>
+
+      <!-- Data-efficiency chart -->
+      <figure class="stars-figure">
+        <div class="viz-root">
+          <p class="viz-title">SNS pedestrian action classification &mdash; macro <em>F</em><sub>1</sub> vs. labeled-data fraction</p>
+          <div class="viz-scroll">
+            <svg id="eff-chart" viewBox="0 0 860 400" role="img"
+                 aria-label="Line chart of SNS macro F1 versus labeled-data fraction. STARS-He rises from 0.362 at 1 percent to 0.503 at 100 percent and STARS-Ho from 0.344 to 0.475, while the Autoencoder stays near 0.31 and the MLP near 0.30 across all fractions.">
+              <g class="viz-grid">
+                <line x1="64" x2="700" y1="324.17" y2="324.17"></line>
+                <line x1="64" x2="700" y1="259.58" y2="259.58"></line>
+                <line x1="64" x2="700" y1="195.00" y2="195.00"></line>
+                <line x1="64" x2="700" y1="130.42" y2="130.42"></line>
+                <line x1="64" x2="700" y1="65.83"  y2="65.83"></line>
+              </g>
+              <g class="viz-axis-label viz-y-label">
+                <text x="54" y="324.17">0.30</text>
+                <text x="54" y="259.58">0.35</text>
+                <text x="54" y="195.00">0.40</text>
+                <text x="54" y="130.42">0.45</text>
+                <text x="54" y="65.83">0.50</text>
+              </g>
+              <line class="viz-axis" x1="64" x2="700" y1="350" y2="350"></line>
+              <g class="viz-axis-label viz-x-label">
+                <text x="64" y="372">1%</text>
+                <text x="191.2" y="372">5%</text>
+                <text x="318.4" y="372">10%</text>
+                <text x="445.6" y="372">25%</text>
+                <text x="572.8" y="372">50%</text>
+                <text x="700" y="372">100%</text>
+              </g>
+              <text class="viz-axis-title" x="382" y="396">Fraction of labeled training data</text>
+
+              <!-- series -->
+              <g class="viz-series" data-series="MLP" style="--c: var(--series-4)">
+                <polyline points="64,331.92 191.2,328.04 318.4,324.17 445.6,316.42 572.8,330.62 700,333.21"></polyline>
+              </g>
+              <g class="viz-series" data-series="Autoencoder" style="--c: var(--series-3)">
+                <polyline points="64,313.83 191.2,312.54 318.4,315.12 445.6,311.25 572.8,312.54 700,282.83"></polyline>
+              </g>
+              <g class="viz-series" data-series="STARS-Ho" style="--c: var(--series-2)">
+                <polyline points="64,267.33 191.2,154.96 318.4,126.54 445.6,107.17 572.8,103.29 700,98.13"></polyline>
+              </g>
+              <g class="viz-series" data-series="STARS-He" style="--c: var(--series-1)">
+                <polyline points="64,244.08 191.2,134.29 318.4,104.58 445.6,74.87 572.8,64.54 700,61.96"></polyline>
+              </g>
+
+              <!-- direct labels -->
+              <g class="viz-direct-label">
+                <text x="712" y="62" style="--c: var(--series-1)">STARS-He</text>
+                <text x="712" y="100" style="--c: var(--series-2)">STARS-Ho</text>
+                <text x="712" y="286" style="--c: var(--series-3)">Autoencoder</text>
+                <text x="712" y="336" style="--c: var(--series-4)">MLP</text>
+              </g>
+
+              <g id="eff-points"></g>
+            </svg>
+          </div>
+          <div id="eff-tooltip" class="viz-tooltip" hidden></div>
+          <div class="viz-legend">
+            <span class="viz-legend-item"><span class="viz-swatch" style="--c: var(--series-1)"></span>STARS-He (ours)</span>
+            <span class="viz-legend-item"><span class="viz-swatch" style="--c: var(--series-2)"></span>STARS-Ho (ours)</span>
+            <span class="viz-legend-item"><span class="viz-swatch" style="--c: var(--series-3)"></span>Autoencoder</span>
+            <span class="viz-legend-item"><span class="viz-swatch" style="--c: var(--series-4)"></span>MLP</span>
+          </div>
+        </div>
+        <figcaption class="has-text-centered is-size-6" style="margin-top: 0.5rem;">
+          <em>
+            Macro <em>F</em><sub>1</sub>-Score on the held-out SNS action classification test set, averaged over 10 seeds.
+            Full numbers, including standard deviations, are in the table below.
+          </em>
+        </figcaption>
+      </figure>
+
+      <!-- Main results table -->
+      <h3 class="title is-5 has-text-centered" style="margin-top: 2.5rem;">Full results</h3>
+      <div class="table-container">
+        <table class="table is-narrow is-hoverable is-fullwidth stars-table stars-results">
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Method</th>
+              <th class="has-text-centered">1%</th>
+              <th class="has-text-centered">5%</th>
+              <th class="has-text-centered">10%</th>
+              <th class="has-text-centered">25%</th>
+              <th class="has-text-centered">50%</th>
+              <th class="has-text-centered">100%</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- SEAN-T Competence -->
+            <tr>
+              <th rowspan="5" class="stars-group">SEAN-T<br><span>Competence</span></th>
+              <td>MLP</td>
+              <td>0.450 <span class="pm">± 0.22</span></td><td>0.546 <span class="pm">± 0.19</span></td><td>0.664 <span class="pm">± 0.15</span></td><td>0.761 <span class="pm">± 0.03</span></td><td>0.778 <span class="pm">± 0.02</span></td><td>0.797 <span class="pm">± 0.02</span></td>
+            </tr>
+            <tr>
+              <td>Autoencoder</td>
+              <td class="best">0.663 <span class="pm">± 0.08</span></td><td>0.678 <span class="pm">± 0.05</span></td><td>0.706 <span class="pm">± 0.05</span></td><td>0.734 <span class="pm">± 0.02</span></td><td>0.747 <span class="pm">± 0.02</span></td><td>0.742 <span class="pm">± 0.02</span></td>
+            </tr>
+            <tr>
+              <td>Random Forest</td>
+              <td>0.557 <span class="pm">± 0.20</span></td><td>0.641 <span class="pm">± 0.12</span></td><td>0.680 <span class="pm">± 0.10</span></td><td>0.704 <span class="pm">± 0.09</span></td><td>0.715 <span class="pm">± 0.09</span></td><td>0.718 <span class="pm">± 0.08</span></td>
+            </tr>
+            <tr class="ours stars-rule">
+              <td>STARS-He <span class="ours-tag">(ours)</span></td>
+              <td>0.635 <span class="pm">± 0.10</span></td><td>0.673 <span class="pm">± 0.07</span></td><td>0.726 <span class="pm">± 0.04</span></td><td>0.762 <span class="pm">± 0.03</span></td><td>0.781 <span class="pm">± 0.03</span></td><td>0.794 <span class="pm">± 0.02</span></td>
+            </tr>
+            <tr class="ours">
+              <td>STARS-Ho <span class="ours-tag">(ours)</span></td>
+              <td>0.612 <span class="pm">± 0.14</span></td><td class="best">0.702 <span class="pm">± 0.08</span></td><td class="best">0.738 <span class="pm">± 0.05</span></td><td class="best">0.765 <span class="pm">± 0.04</span></td><td class="best">0.787 <span class="pm">± 0.03</span></td><td class="best">0.799 <span class="pm">± 0.02</span></td>
+            </tr>
+
+            <!-- SEAN-T Surprise -->
+            <tr class="stars-block">
+              <th rowspan="5" class="stars-group">SEAN-T<br><span>Surprise</span></th>
+              <td>MLP</td>
+              <td>0.217 <span class="pm">± 0.22</span></td><td>0.250 <span class="pm">± 0.14</span></td><td>0.423 <span class="pm">± 0.27</span></td><td>0.450 <span class="pm">± 0.21</span></td><td>0.630 <span class="pm">± 0.23</span></td><td>0.720 <span class="pm">± 0.09</span></td>
+            </tr>
+            <tr>
+              <td>Autoencoder</td>
+              <td class="best">0.548 <span class="pm">± 0.10</span></td><td class="best">0.597 <span class="pm">± 0.12</span></td><td class="best">0.660 <span class="pm">± 0.07</span></td><td class="best">0.674 <span class="pm">± 0.09</span></td><td>0.712 <span class="pm">± 0.10</span></td><td>0.739 <span class="pm">± 0.06</span></td>
+            </tr>
+            <tr>
+              <td>Random Forest</td>
+              <td>0.291 <span class="pm">± 0.24</span></td><td>0.341 <span class="pm">± 0.19</span></td><td>0.373 <span class="pm">± 0.20</span></td><td>0.444 <span class="pm">± 0.16</span></td><td>0.470 <span class="pm">± 0.15</span></td><td>0.496 <span class="pm">± 0.15</span></td>
+            </tr>
+            <tr class="ours stars-rule">
+              <td>STARS-He <span class="ours-tag">(ours)</span></td>
+              <td>0.455 <span class="pm">± 0.17</span></td><td>0.481 <span class="pm">± 0.17</span></td><td>0.526 <span class="pm">± 0.15</span></td><td>0.603 <span class="pm">± 0.12</span></td><td>0.655 <span class="pm">± 0.08</span></td><td>0.709 <span class="pm">± 0.04</span></td>
+            </tr>
+            <tr class="ours">
+              <td>STARS-Ho <span class="ours-tag">(ours)</span></td>
+              <td>0.440 <span class="pm">± 0.23</span></td><td>0.541 <span class="pm">± 0.21</span></td><td>0.548 <span class="pm">± 0.20</span></td><td>0.610 <span class="pm">± 0.16</span></td><td class="best">0.713 <span class="pm">± 0.06</span></td><td class="best">0.741 <span class="pm">± 0.03</span></td>
+            </tr>
+
+            <!-- SEAN-T Intention -->
+            <tr class="stars-block">
+              <th rowspan="5" class="stars-group">SEAN-T<br><span>Intention</span></th>
+              <td>MLP</td>
+              <td>0.479 <span class="pm">± 0.20</span></td><td>0.533 <span class="pm">± 0.13</span></td><td>0.606 <span class="pm">± 0.06</span></td><td>0.659 <span class="pm">± 0.03</span></td><td>0.693 <span class="pm">± 0.03</span></td><td>0.703 <span class="pm">± 0.01</span></td>
+            </tr>
+            <tr>
+              <td>Autoencoder</td>
+              <td>0.569 <span class="pm">± 0.04</span></td><td>0.622 <span class="pm">± 0.03</span></td><td>0.659 <span class="pm">± 0.03</span></td><td>0.665 <span class="pm">± 0.05</span></td><td>0.661 <span class="pm">± 0.03</span></td><td>0.664 <span class="pm">± 0.02</span></td>
+            </tr>
+            <tr>
+              <td>Random Forest</td>
+              <td>0.592 <span class="pm">± 0.18</span></td><td>0.665 <span class="pm">± 0.10</span></td><td>0.685 <span class="pm">± 0.09</span></td><td>0.692 <span class="pm">± 0.09</span></td><td>0.700 <span class="pm">± 0.08</span></td><td>0.698 <span class="pm">± 0.09</span></td>
+            </tr>
+            <tr class="ours stars-rule">
+              <td>STARS-He <span class="ours-tag">(ours)</span></td>
+              <td>0.576 <span class="pm">± 0.08</span></td><td>0.619 <span class="pm">± 0.05</span></td><td>0.671 <span class="pm">± 0.04</span></td><td>0.694 <span class="pm">± 0.03</span></td><td>0.705 <span class="pm">± 0.03</span></td><td>0.721 <span class="pm">± 0.03</span></td>
+            </tr>
+            <tr class="ours">
+              <td>STARS-Ho <span class="ours-tag">(ours)</span></td>
+              <td class="best">0.603 <span class="pm">± 0.10</span></td><td class="best">0.671 <span class="pm">± 0.07</span></td><td class="best">0.701 <span class="pm">± 0.06</span></td><td class="best">0.715 <span class="pm">± 0.04</span></td><td class="best">0.723 <span class="pm">± 0.03</span></td><td class="best">0.734 <span class="pm">± 0.02</span></td>
+            </tr>
+
+            <!-- SNS Macro F1 -->
+            <tr class="stars-block">
+              <th rowspan="4" class="stars-group">SNS<br><span>Macro <em>F</em><sub>1</sub></span></th>
+              <td>MLP</td>
+              <td>0.294 <span class="pm">± 0.00</span></td><td>0.297 <span class="pm">± 0.01</span></td><td>0.300 <span class="pm">± 0.01</span></td><td>0.306 <span class="pm">± 0.02</span></td><td>0.295 <span class="pm">± 0.01</span></td><td>0.293 <span class="pm">± 0.00</span></td>
+            </tr>
+            <tr>
+              <td>Autoencoder</td>
+              <td>0.308 <span class="pm">± 0.019</span></td><td>0.309 <span class="pm">± 0.018</span></td><td>0.307 <span class="pm">± 0.022</span></td><td>0.310 <span class="pm">± 0.018</span></td><td>0.309 <span class="pm">± 0.018</span></td><td>0.332 <span class="pm">± 0.008</span></td>
+            </tr>
+            <tr class="ours stars-rule">
+              <td>STARS-He <span class="ours-tag">(ours)</span></td>
+              <td class="best">0.362 <span class="pm">± 0.058</span></td><td class="best">0.447 <span class="pm">± 0.051</span></td><td class="best">0.470 <span class="pm">± 0.044</span></td><td class="best">0.493 <span class="pm">± 0.032</span></td><td class="best">0.501 <span class="pm">± 0.028</span></td><td class="best">0.503 <span class="pm">± 0.022</span></td>
+            </tr>
+            <tr class="ours">
+              <td>STARS-Ho <span class="ours-tag">(ours)</span></td>
+              <td>0.344 <span class="pm">± 0.05</span></td><td>0.431 <span class="pm">± 0.045</span></td><td>0.453 <span class="pm">± 0.035</span></td><td>0.468 <span class="pm">± 0.03</span></td><td>0.471 <span class="pm">± 0.024</span></td><td>0.475 <span class="pm">± 0.02</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="content" style="margin-top: 0.75rem;">
+        <p class="has-text-justified is-size-6">
+          <em>F</em><sub>1</sub>-Scores (&mu; &plusmn; &sigma;) over 10 random seeds, across progressively scaled fractions of labeled data.
+          <strong>STARS-He</strong> is the heterogeneous variant and <strong>STARS-Ho</strong> the homogeneous one; both use a frozen
+          pretrained encoder with a lightweight linear probe. Best score in each column of a block is in <strong>bold</strong>.
+          Random Forest is omitted for SNS because of the dataset's variable-sized, high-dimensional features.
+        </p>
+
+        <details style="margin-top:0.5rem;">
+          <summary><strong>Further results reported in the paper</strong></summary>
+          <ul style="margin-top:0.5rem;">
+            <li><strong>Self-supervised vs. supervised.</strong> The identical heterogeneous architecture trained end-to-end on SNS labels
+              reaches 0.445 macro <em>F</em><sub>1</sub> at 100% labeled data, versus 0.503 for frozen STARS-He plus a linear probe.</li>
+            <li><strong>Cross-dataset transfer.</strong> STARS-He pretrained only on SEAN-T reaches 0.497 macro <em>F</em><sub>1</sub> on SNS
+              (vs. 0.503 under joint pretraining); pretrained only on SNS it reaches 0.801 / 0.710 / 0.729 on SEAN-T
+              competence / surprise / intention (vs. 0.794 / 0.709 / 0.721 jointly).</li>
+            <li><strong>Where relational structure matters.</strong> STARS-He beats the temporal Autoencoder at every labeled-data
+              fraction on SNS, while on SEAN-T the Autoencoder stays competitive &mdash; explicit relational structure helps
+              pedestrian action classification more than perception prediction.</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+  </section>
+  <!-- End results -->
+
+  <!-- Architecture -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Architecture</h2>
+        <figure class="image">
+          <img src="static/images/architecture.png" alt="STARS heterogeneous architecture: raw inputs, preprocessing, HEAT message-passing encoder, latent space, and decoder">
+          <figcaption class="has-text-justified is-size-6" style="margin-top: 0.5rem;">
+            <em>
+              <strong>STARS heterogeneous architecture.</strong> Raw inputs (robot occupancy grid and goal, learned human embeddings,
+              8-D temporal edge features) are projected to a 256-D shared hidden space by type-specific preprocessing &mdash; MLPs for
+              nodes, a Transformer for edges. The encoder performs HEAT-style message passing over the fully connected heterogeneous
+              graph, with attention and messages parameterized over the concatenated edge-conditioned representation
+              <strong>u</strong><sub>ij</sub>. The resulting 256-D node states are projected through shared linear heads to per-node
+              Gaussian posteriors and sampled to 128-D latents <strong>z</strong><sub>i</sub> via the reparameterization trick.
+              The decoder reconstructs edge features (and robot features on SEAN-T) from latent pairs, trained jointly with a KL
+              divergence term against <em>N</em>(0, <em>I</em>). Pretrained encoders are frozen for downstream linear probing.
+            </em>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <!-- TODO: update to the arXiv/venue entry once available -->
+      <pre><code>@article{tsoi2026stars,
+  title   = {STARS: From Spatiotemporal Dynamics to Social Representations in Human-Robot Interaction},
+  author  = {Tsoi, Nathan and Munje, Michael J. and Oberoi, Tejas and Maheshwari, Rishab
+             and Zheng, Pengen and Chauhan, Tanush and Stone, Peter and Biswas, Joydeep},
+  year    = {2026}
+}</code></pre>
+    </div>
+  </section>
+  <!--End BibTex citation -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="static/js/stars-chart.js"></script>
+
+  <!-- Statcounter tracking code -->
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+  <!-- End of Statcounter Code -->
+
+</body>
+</html>
