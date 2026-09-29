@@ -3,10 +3,9 @@
 <head>
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <meta name="description" content="STARS learns event-level relational representations of human-robot interaction by autoencoding spatiotemporal interaction graphs.">
+  <meta name="description" content="STARS learns event-level relational representations for social navigation by autoencoding spatiotemporal interaction graphs.">
   <meta property="og:title" content="STARS"/>
-  <meta property="og:description" content="STARS learns event-level relational representations of human-robot interaction by autoencoding spatiotemporal interaction graphs."/>
-  <!-- TODO: replace with the final project page URL -->
+  <meta property="og:description" content="STARS learns event-level relational representations for social navigation by autoencoding spatiotemporal interaction graphs."/>
   <meta property="og:url" content="https://larg.github.io/stars"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/images/method.png" />
@@ -14,7 +13,7 @@
   <meta property="og:image:height" content="630"/>
 
   <meta name="twitter:title" content="STARS">
-  <meta name="twitter:description" content="STARS learns event-level relational representations of human-robot interaction by autoencoding spatiotemporal interaction graphs.">
+  <meta name="twitter:description" content="STARS learns event-level relational representations for social navigation by autoencoding spatiotemporal interaction graphs.">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
   <meta name="twitter:image" content="static/images/method.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -53,7 +52,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">STARS: From Spatiotemporal Dynamics to Social Representations in Human-Robot Interaction</h1>
-            <!-- TODO: update once the venue is decided (currently a preprint / submission) -->
+            <!-- Venue -->
             <p class="subtitle is-4 has-text-grey-dark" style="margin-top:-0.5rem;">
               CoRL 2026
             </p>
@@ -61,8 +60,8 @@
             <!-- Paper authors -->
             <div class="is-size-5 publication-authors">
               <!-- TODO: add personal page links for the authors without one below -->
-                <a href="https://www.nathantsoi.com" target="_blank" rel="noopener noreferrer">Nathan Tsoi</a><sup>1</sup><sup>*</sup><sup>✉</sup>,</span>
-              <a href="https://www.michaelmunje.com" target="_blank" rel="noopener noreferrer">Michael J. Munje</a><sup>1</sup><sup>*</sup>,</span>
+              <span class="author-block"><a href="https://www.nathantsoi.com" target="_blank" rel="noopener noreferrer">Nathan Tsoi</a><sup>1</sup><sup>*</sup><sup>✉</sup>,</span>
+              <span class="author-block"><a href="https://www.michaelmunje.com" target="_blank" rel="noopener noreferrer">Michael J. Munje</a><sup>1</sup><sup>*</sup>,</span>
               <span class="author-block">Tejas Oberoi<sup>1</sup>,</span>
               <span class="author-block">Rishab Maheshwari<sup>1</sup>,</span>
               <span class="author-block">Pengen Zheng<sup>1</sup>,</span>
@@ -126,7 +125,7 @@
           <figcaption class="has-text-centered is-size-6" style="margin-top: 0.5rem;">
             <em>
               The three stages of <strong>STARS</strong>:
-              (<strong>A</strong>) construct spatiotemporal graphs from multi-modal Human-Robot Interaction datasets,
+              (<strong>A</strong>) construct spatiotemporal graphs from social navigation datasets,
               (<strong>B</strong>) use an unsupervised message-passing graph autoencoder to compress physical dynamics into latent representations, and
               (<strong>C</strong>) adapt the frozen latents to downstream tasks with lightweight task-specific prediction heads.
             </em>
@@ -144,7 +143,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Fielding socially competent robots requires joint reasoning over spatial information and the social information it can convey, such as group motion and personal space. While current models excel at either spatial reasoning (e.g., modeling physical dynamics) or social reasoning (e.g., parsing text-based interactions), few natively unify both. Moreover, data scarcity in Human-Robot Interaction (HRI) makes training large models from scratch challenging. To bridge this gap, we introduce <strong>STARS</strong>: <strong>S</strong>patio<strong>T</strong>emporal <strong>A</strong>utoencoded <strong>R</strong>epresentations for <strong>S</strong>ocial-interaction, a method for learning <em>event-level relational representations</em> that summarize short interaction scenarios from social navigation datasets. Rather than training task-specific models, STARS models fixed-duration interaction scenarios, i.e., short windows of multi-agent interaction, as spatiotemporal graphs. A self-supervised message-passing graph neural network autoencoder then compresses these physical dynamics into a compact latent space for each node. By explicitly modeling agents and their interactions as graph structure, STARS injects a strong relational inductive bias to naturally capture the underlying social situation. To assess the utility of these learned representations, we evaluate STARS' representations on the SEAN Together dataset, which provides VR-based navigation data annotated with subjective human perceptions, and the SocialNav-SUB benchmark for social scene understanding. When trained on STARS representations, linear probes achieve highly competitive performance on perception prediction and pedestrian action classification tasks. Specifically, STARS exhibits strong data efficiency, with its largest gains over unstructured baselines on pedestrian action classification, where STARS-He achieves a macro <em>F</em><sub>1</sub>-Score of 0.362 with 1% of labeled data and 0.503 with 100%. Furthermore, qualitative analysis of the learned latent space reveals that STARS representations can capture high-level social semantics, demonstrating cohesive clustering of distinct human action intents without optimizing the encoder with a supervised action classification objective.
+              Fielding socially competent robots requires joint reasoning over spatial information and the social information it can convey, such as group motion and personal space. While current models excel at either spatial reasoning (e.g., modeling physical dynamics) or social reasoning (e.g., parsing text-based interactions), few natively unify both. Moreover, data scarcity in Human-Robot Interaction (HRI) makes training large models from scratch challenging. To bridge this gap, we introduce <strong>STARS</strong>: <strong>S</strong>patio<strong>T</strong>emporal <strong>A</strong>utoencoded <strong>R</strong>epresentations for <strong>S</strong>ocial-interaction, a method for learning <em>event-level relational representations</em> that summarize short interaction scenarios from social navigation datasets. Rather than training task-specific models, STARS models fixed-duration interaction scenarios, i.e., short windows of multi-agent interaction, as spatiotemporal graphs. A self-supervised message-passing graph neural network autoencoder then compresses these physical dynamics into a compact latent space for each node. By explicitly modeling agents and their interactions as graph structure, STARS injects a strong relational inductive bias to naturally capture the underlying social situation. To assess the utility of these learned representations, we evaluate STARS' representations on the SEAN Together dataset, which provides VR-based navigation data annotated with subjective human perceptions, and the SocialNav-SUB benchmark for social scene understanding. When trained on STARS representations, linear probes achieve highly competitive performance on perception prediction and pedestrian action classification tasks. Specifically, STARS exhibits strong data efficiency, particularly on pedestrian action classification, where STARS-He consistently outperforms unstructured baselines across labeled-data fractions, including in low-data settings. Furthermore, qualitative analysis of the learned latent space reveals that STARS representations can capture high-level social semantics, demonstrating cohesive clustering of distinct human action intents without optimizing the encoder with a supervised action classification objective.
             </p>
           </div>
         </div>
@@ -176,8 +175,8 @@
               <h3 class="stars-card-title">Self-supervised graph autoencoder</h3>
               <p class="stars-card-body">
                 A message-passing GNN-VAE encodes each node to a <strong>128-D Gaussian latent</strong> and reconstructs the temporal
-                edge features from latent pairs. No labels are used during pretraining, so the encoder can be larger than a
-                supervised model of the same architecture without overfitting the scarce annotations.
+                edge features from latent pairs. The reconstruction objective is self-supervised, allowing the encoder to learn
+                representations without directly optimizing for downstream classification.
               </p>
             </div>
           </div>
@@ -277,7 +276,7 @@
         and train a linear probe on progressively larger fractions of the labels. The clearest gap appears on
         <strong>SNS pedestrian action classification</strong>: unstructured baselines plateau near a macro
         <em>F</em><sub>1</sub>-Score of 0.3 no matter how much labeled data they receive, while
-        <strong>STARS-He reaches 0.362 with just 1% of the labels (60 samples)</strong> and climbs to 0.503 at 100%.
+        <strong>STARS-He reaches 0.362 with just 1% of the labels</strong> and climbs to 0.503 at 100%.
       </p>
 
       <!-- Data-efficiency chart -->
@@ -515,12 +514,12 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <!-- TODO: update to the arXiv/venue entry once available -->
-      <pre><code>@article{(TODO:UPDATE WITH ARXIV ONE)tsoi2026stars,
-  title   = {STARS: From Spatiotemporal Dynamics to Social Representations in Human-Robot Interaction},
-  author  = {Tsoi, Nathan and Munje, Michael J. and Oberoi, Tejas and Maheshwari, Rishab
-             and Zheng, Pengen and Chauhan, Tanush and Stone, Peter and Biswas, Joydeep},
-  year    = {2026}
+      <pre><code>@inproceedings{tsoi2026stars,
+  title     = {STARS: From Spatiotemporal Dynamics to Social Representations in Human-Robot Interaction},
+  author    = {Tsoi, Nathan and Munje, Michael J. and Oberoi, Tejas and Maheshwari, Rishab
+               and Zheng, Pengen and Chauhan, Tanush and Stone, Peter and Biswas, Joydeep},
+  booktitle = {Conference on Robot Learning (CoRL)},
+  year      = {2026}
 }</code></pre>
     </div>
   </section>
